@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.coderhouse.controller.MessageControllerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-01-19T21:51:48" hostname="NTBK-TECH1063" time="0.384">
+  <properties/>
+  <testcase name="getMessageByIdResult()" classname="com.coderhouse.controller.MessageControllerTest" time="0.315"/>
+  <testcase name="getMessageById()" classname="com.coderhouse.controller.MessageControllerTest" time="0.014"/>
+  <testcase name="getAllMessages()" classname="com.coderhouse.controller.MessageControllerTest" time="0.02"/>
+  <testcase name="getMessageByDescription()" classname="com.coderhouse.controller.MessageControllerTest" time="0.022"/>
+  <testcase name="getExampleMessage()" classname="com.coderhouse.controller.MessageControllerTest" time="0.008"/>
+  <system-out><![CDATA[?[34m18:51:47.153?[m [Test worker] ?[32mINFO ?[m ?[35mo.s.b.t.c.SpringBootTestContextBootstrapper?[m - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.coderhouse.controller.MessageControllerTest], using SpringBootContextLoader
+?[34m18:51:47.162?[m [Test worker] ?[32mINFO ?[m ?[35mo.s.t.c.s.AbstractContextLoader?[m - Could not detect default resource locations for test class [com.coderhouse.controller.MessageControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+?[34m18:51:47.163?[m [Test worker] ?[32mINFO ?[m ?[35mo.s.t.c.s.AnnotationConfigContextLoaderUtils?[m - Could not detect default configuration classes for test class [com.coderhouse.controller.MessageControllerTest]: MessageControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+?[34m18:51:47.246?[m [Test worker] ?[32mINFO ?[m ?[35mo.s.b.t.c.SpringBootTestContextBootstrapper?[m - Found @SpringBootConfiguration com.coderhouse.ExampleApplication for test class com.coderhouse.controller.MessageControllerTest
+?[34m18:51:47.315?[m [Test worker] ?[32mINFO ?[m ?[35mo.s.b.t.c.SpringBootTestContextBootstrapper?[m - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+?[34m18:51:47.323?[m [Test worker] ?[32mINFO ?[m ?[35mo.s.b.t.c.SpringBootTestContextBootstrapper?[m - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@e04ccf8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@51d143a1, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1a28aef1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4647881c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6e0cff20, org.springframework.test.context.support.DirtiesContextTestExecutionListener@359b650b, org.springframework.test.context.event.EventPublishingTestExecutionListener@6a9b0a6f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@10667848, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@191a709b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@77c7ed8e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@453d496b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@66bacdbc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2c6ee758]
+@BeforeAll - se ejecuta antes de todos los tests
+2022-01-19 18:51:47,556 Test worker INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.2)
+
+?[34m18:51:47.646?[m [Test worker] ?[32mINFO ?[m ?[35mc.c.c.MessageControllerTest?[m - Starting MessageControllerTest using Java 11.0.13 on NTBK-TECH1063 with PID 32526 (started by ccamano in /home/ccamano/IdeaProjects/ejemplo-spring-boot-apirest)
+?[34m18:51:47.648?[m [Test worker] ?[36mDEBUG?[m ?[35mc.c.c.MessageControllerTest?[m - Running with Spring Boot v2.6.2, Spring v5.3.14
+?[34m18:51:47.649?[m [Test worker] ?[32mINFO ?[m ?[35mc.c.c.MessageControllerTest?[m - No active profile set, falling back to default profiles: default
+?[34m18:51:48.754?[m [Test worker] ?[32mINFO ?[m ?[35mo.s.b.t.m.w.SpringBootMockServletContext?[m - Initializing Spring TestDispatcherServlet ''
+?[34m18:51:48.754?[m [Test worker] ?[32mINFO ?[m ?[35mo.s.t.w.s.TestDispatcherServlet?[m - Initializing Servlet ''
+?[34m18:51:48.762?[m [Test worker] ?[32mINFO ?[m ?[35mo.s.t.w.s.TestDispatcherServlet?[m - Completed initialization in 0 ms
+?[34m18:51:48.783?[m [Test worker] ?[32mINFO ?[m ?[35mc.c.c.MessageControllerTest?[m - Started MessageControllerTest in 1.332 seconds (JVM running for 2.787)
+@BeforeEach - se ejecuta antes de la ejecución de cada test
+?[34m18:51:49.030?[m [Test worker] ?[32mINFO ?[m ?[35mc.c.c.MessageController?[m - GET obtener mensaje por el id
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /coder-house/mensajes/1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.coderhouse.controller.MessageController
+           Method = com.coderhouse.controller.MessageController#getMensajeById(Long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":1,"description":"Mensaje-ABCD"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+@BeforeEach - se ejecuta antes de la ejecución de cada test
+?[34m18:51:49.117?[m [Test worker] ?[32mINFO ?[m ?[35mc.c.c.MessageController?[m - GET obtener mensaje por el id
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /coder-house/mensajes/1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.coderhouse.controller.MessageController
+           Method = com.coderhouse.controller.MessageController#getMensajeById(Long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":1,"description":"Mensaje-ABCD"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+@BeforeEach - se ejecuta antes de la ejecución de cada test
+?[34m18:51:49.132?[m [Test worker] ?[32mINFO ?[m ?[35mc.c.c.MessageController?[m - GET Request recibido string
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /coder-house/mensajes/all
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.coderhouse.controller.MessageController
+           Method = com.coderhouse.controller.MessageController#getMensajesAll()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"id":1,"description":"Mensaje-ABCD"},{"id":2,"description":"Mensaje-ABCD"},{"id":3,"description":"Mensaje-ABCD"},{"id":4,"description":"Mensaje-ABCE"},{"id":5,"description":"Mensaje-ABCF"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+@BeforeEach - se ejecuta antes de la ejecución de cada test
+Mensaje-ABCD
+?[34m18:51:49.157?[m [Test worker] ?[32mINFO ?[m ?[35mc.c.c.MessageController?[m - GET obtener mensajes que sean iguales a la descripción
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /coder-house/mensajes
+       Parameters = {description=[Mensaje-ABCD]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.coderhouse.controller.MessageController
+           Method = com.coderhouse.controller.MessageController#getMensajesByDescription(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"id":1,"description":"Mensaje-ABCD"},{"id":2,"description":"Mensaje-ABCD"},{"id":3,"description":"Mensaje-ABCD"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+ÉXITO: El resultado no es nulo y hay match de todas las descripciones de los elementos de la lista con la pedida.
+@BeforeEach - se ejecuta antes de la ejecución de cada test
+?[34m18:51:49.176?[m [Test worker] ?[32mINFO ?[m ?[35mc.c.c.MessageController?[m - GET Request recibido string
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /coder-house/mensajes/example
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.coderhouse.controller.MessageController
+           Method = com.coderhouse.controller.MessageController#getMensajesString()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"20"]
+     Content type = text/plain;charset=UTF-8
+             Body = Ejemplo de respuesta
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
